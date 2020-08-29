@@ -11,8 +11,8 @@ import {Listing} from '../types';
 export class ListingDetailPageComponent implements OnInit {
 
   listing: Listing;
-  constructor(private  route: ActivatedRoute) {
 
+  constructor(private  route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
