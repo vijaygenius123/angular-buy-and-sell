@@ -8,9 +8,13 @@ import {Listing} from '../types';
 })
 export class ListingDataFormComponent implements OnInit {
   @Input() buttonText;
+  @Input() currentName = '';
+  @Input() currentDescription = '';
+  @Input() currentPrice = '';
+
   name = '';
   description = '';
-  price = 0;
+  price = '';
 
   // tslint:disable-next-line:no-output-on-prefix
   @Output() onSubmit = new EventEmitter<Listing>();
@@ -18,6 +22,9 @@ export class ListingDataFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.name = this.currentName;
+    this.description = this.currentDescription;
+    this.price = this.currentPrice;
   }
 
   onButtonClicked(): void {
